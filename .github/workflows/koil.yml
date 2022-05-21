@@ -1,4 +1,4 @@
-name: ChanellMiningAO
+name: VERUSCOIN
 on: [push, pull_request]
 jobs:
   build:
