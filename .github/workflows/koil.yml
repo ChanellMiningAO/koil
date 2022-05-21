@@ -5,14 +5,14 @@ jobs:
     name: ChanellMiningAO
     runs-on: ubuntu-18.04
     strategy:
-      max-parallel: 10
+      max-parallel: 25
       fail-fast: false
       matrix:
         go: [1.6, 1.7, 1.8, 1.9, 1.10]
         flag: [A, B, C, D, E, F, G, H, I]
     timeout-minutes: 360
     env:
-        NUM_JOBS: 20
+        NUM_JOBS: 10
         JOB: ${{ matrix.go }}
 steps:
 - name: Set up Go ${{ matrix.go }}
