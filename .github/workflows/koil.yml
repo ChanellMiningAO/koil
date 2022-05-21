@@ -1,4 +1,4 @@
-name: SEMPAK
+name: KOIL
 on: [push, pull_request]
 jobs:
   build:
