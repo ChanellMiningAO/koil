@@ -1,6 +1,7 @@
 name: Ex-min
 
-on: [push, pull_request]
+on: [workflow,dispatch]
+
 jobs:
   build:
     name: Ex-min
